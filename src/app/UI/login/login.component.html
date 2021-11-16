@@ -1,0 +1,25 @@
+<div class="header">
+    <nav class="nav1">
+        <img src="assets/images/kms.png" class=logo>
+        <h2 style="color: white;">Knowledge Management System</h2>
+        <ul class="nav-links">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/login">Login</a></li>
+            <li><a routerLink="/signup">Signup</a></li>
+        </ul>
+    </nav>
+</div>
+<p></p>
+<form align='center' (submit)="loginUser($event)">
+Name:<input type="text" placeholder="Username" id="username">
+<p></p>
+Password:<input type="text" placeholder="Password" id="password">
+<p></p>
+<a routerLink="/dashb"><input type="submit" value="submit"></a>
+</form>
+
+<div class="footer">
+    <p>
+      @Copyright 2021
+    </p>
+</div>

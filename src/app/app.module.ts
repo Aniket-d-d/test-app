@@ -5,12 +5,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { DashbComponent } from './dashb/dashb.component';
-import { AdudComponent } from './adud/adud.component';
-import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './UI/home/home.component';
+import { LoginComponent } from './UI/login/login.component';
+import { SignupComponent } from './UI/signup/signup.component';
+import { DashbComponent } from './UI/dashb/dashb.component';
+import { AdudComponent } from './UI/adud/adud.component';
+import { SearchComponent } from './UI/search/search.component';
+import { ConnectserviceService } from './connectservice.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SearchComponent } from './search/search.component';
     SignupComponent,
     DashbComponent,
     AdudComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,7 @@ import { SearchComponent } from './search/search.component';
     ])
 
   ],
-  providers: [],
+  providers: [ConnectserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
