@@ -6,12 +6,13 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ConnectserviceService {
 
-  _url = 'htttp://localhost:4200';
+  _url = 'http://localhost:4200/signup';
+  //private _url: string = 'http://localhost:4200';
 
   constructor(private http: HttpClient) { }
 
-  getsignupdetails(username: any, password: any, repassword: any){
-    return this.http.post<any>(`${this._url}/signup`, {
+  getsignupdetails(username: any, password: any){
+    return this.http.put(this._url, {
       username,
       password
     })

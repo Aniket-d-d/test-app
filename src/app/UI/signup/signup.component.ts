@@ -12,16 +12,17 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  signupUser(event: { preventDefault: () => void; target: any; }) {
+  signupUser(event: { target: any; }) {
 
-    event.preventDefault()
+    //event.preventDefault()
     const target = event.target
     const username = target.querySelector('#username').value
     const password = target.querySelector('#password').value
     const repassword = target.querySelector('#repassword').value
+    console.log(username, password, repassword);
 
-    this.Connectservice.getsignupdetails(username, password, repassword)
-    console.log(username, password, repassword)
+    this.Connectservice.getsignupdetails(username, password);
+    
   }
 
 }

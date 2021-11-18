@@ -11,7 +11,7 @@ import { SignupComponent } from './UI/signup/signup.component';
 import { DashbComponent } from './UI/dashb/dashb.component';
 import { AdudComponent } from './UI/adud/adud.component';
 import { SearchComponent } from './UI/search/search.component';
-import { ConnectserviceService } from './connectservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { ConnectserviceService } from './connectservice.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {
@@ -55,7 +56,7 @@ import { ConnectserviceService } from './connectservice.service';
     ])
 
   ],
-  providers: [ConnectserviceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
